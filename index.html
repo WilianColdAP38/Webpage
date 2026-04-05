@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediaHub — Contenido Multimedia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- HEADER: identidad de la página -->
+    <header class="site-header">
+      <h1>MediaHub</h1>
+      <p class="header-sub">Tu plataforma de videos, música e imágenes</p>
+    </header>
+
+    <!-- NAV: los href="#id" son enlaces internos que llevan a cada sección de esta misma página -->
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#videos">🎬 Videos</a></li>
+        <li><a href="#musica">🎵 Música</a></li>
+        <li><a href="#galeria">🖼 Galería</a></li>
+        <li><a href="#destacado">⭐ Destacado</a></li>
+        <li><a href="#contacto">✉ Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- MAIN: contenedor principal de todo el contenido -->
+    <main>
+
+      <!-- SECCIÓN VIDEOS: cada video es un <article> independiente con su propio iframe -->
+      <section id="videos" class="seccion">
+        <h2>🎬 Videos</h2>
+        <p class="seccion-descripcion">Colección de videos embebidos desde YouTube.</p>
+        <div class="contenedor-grid">
+
+          <article class="tarjeta-media">
+            <h3>Aprende HTML en 1 hora</h3>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/kUMe1FH4CHE" title="Aprende HTML en 1 hora"
+                width="100%" height="215" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <p>Tutorial completo de HTML para principiantes. Aprende la estructura básica de una página web.</p>
+            <!-- target="_blank" abre el enlace en una nueva pestaña del navegador -->
+            <a href="https://www.youtube.com/watch?v=kUMe1FH4CHE" target="_blank" class="btn-enlace">Ver en YouTube ↗</a>
+          </article>
+
+          <article class="tarjeta-media">
+            <h3>CSS desde cero</h3>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/wZniZEbPAzk" title="CSS desde cero"
+                width="100%" height="215" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <p>Aprende a estilizar tus páginas web con CSS. Colores, tipografía, layouts y mucho más.</p>
+            <a href="https://www.youtube.com/watch?v=wZniZEbPAzk" target="_blank" class="btn-enlace">Ver en YouTube ↗</a>
+          </article>
+
+          <article class="tarjeta-media">
+            <h3>Introducción a Python</h3>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/Kp4Mvapo5kc" title="Introducción a Python"
+                width="100%" height="215" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <p>Curso de Python para principiantes. Desde variables hasta funciones básicas.</p>
+            <a href="https://www.youtube.com/watch?v=Kp4Mvapo5kc" target="_blank" class="btn-enlace">Ver en YouTube ↗</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECCIÓN MÚSICA: <audio> para archivos locales e <iframe> de Spotify para playlists -->
+      <section id="musica" class="seccion seccion-alt">
+        <h2>🎵 Música</h2>
+        <p class="seccion-descripcion">Escucha música directamente o explora en Spotify.</p>
+        <div class="contenedor-grid">
+
+          <article class="tarjeta-media">
+            <h3>Solo de Guitarra — Pantera</h3>
+            <p>Solo de guitarra de 10 segundos de la banda Pantera.</p>
+            <!-- controls muestra los botones de reproducción al usuario -->
+            <audio controls class="audio-player">
+              <source src="pantera.mp3" type="audio/mpeg" />
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+          </article>
+
+          <article class="tarjeta-media">
+            <h3>Playlist: Lo-Fi para estudiar</h3>
+            <p>Una playlist perfecta para concentrarse mientras programas.</p>
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8Uebhn9wzrS"
+              title="Playlist Lo-Fi para estudiar en Spotify"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS" target="_blank" class="btn-enlace">Abrir en Spotify ↗</a>
+          </article>
+
+          <article class="tarjeta-media">
+            <h3>Playlist: Coding Music</h3>
+            <p>Música instrumental ideal para sesiones largas de programación.</p>
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ"
+              title="Playlist Coding Music en Spotify"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DWZeKCadgRdKQ" target="_blank" class="btn-enlace">Abrir en Spotify ↗</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECCIÓN GALERÍA: cada imagen está dentro de un <article> con <figure> y <figcaption> -->
+      <section id="galeria" class="seccion">
+        <h2>📷 Galería</h2>
+        <p class="seccion-descripcion">Una selección de imágenes organizadas en galería.</p>
+        <div class="contenedor-galeria">
+
+          <article class="tarjeta-imagen">
+            <figure>
+              <img src="foto1.jpeg" alt="Atardecer anaranjado sobre la ciudad" width="400" height="300" />
+              <figcaption>Atardecer en Quito</figcaption>
+            </figure>
+            <a href="foto1.jpeg" class="btn-enlace">Ver imagen completa ↗</a>
+          </article>
+
+          <article class="tarjeta-imagen">
+            <figure>
+              <img src="foto2.jpeg" alt="Volcán nevado con nubes" width="400" height="300" />
+              <figcaption>Playa Tonsupa</figcaption>
+            </figure>
+            <a href="foto2.jpeg" class="btn-enlace">Ver imagen completa ↗</a>
+          </article>
+
+          <article class="tarjeta-imagen">
+            <figure>
+              <img src="foto3.jpeg" alt="Lago con volcán al fondo desde un bote" width="400" height="300" />
+              <figcaption>Sesión de programación</figcaption>
+            </figure>
+            <a href="foto3.jpeg" class="btn-enlace">Ver imagen completa ↗</a>
+          </article>
+
+          <article class="tarjeta-imagen">
+            <figure>
+              <img src="foto4.jpeg" alt="Pantalla con código en VS Code" width="400" height="300" />
+              <figcaption>Lago San Pablo</figcaption>
+            </figure>
+            <a href="foto4.jpeg" class="btn-enlace">Ver imagen completa ↗</a>
+          </article>
+
+          <article class="tarjeta-imagen">
+            <figure>
+              <img src="foto5.jpeg" alt="Playa con olas y cielo azul" width="400" height="300" />
+              <figcaption>Volcan Cotopaxi</figcaption>
+            </figure>
+            <a href="foto5.jpeg" class="btn-enlace">Ver imagen completa ↗</a>
+          </article>
+
+          <article class="tarjeta-imagen">
+            <figure>
+              <img src="foto6.jpeg" alt="Piscina con palmeras y vista al mar" width="400" height="300" />
+              <figcaption>Hotel en Tonsupa</figcaption>
+            </figure>
+            <a href="foto6.jpeg" class="btn-enlace">Ver imagen completa ↗</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECCIÓN DESTACADO: recomendaciones con enlaces externos e internos -->
+      <section id="destacado" class="seccion seccion-alt">
+        <h2>⭐ Contenido Destacado</h2>
+        <p class="seccion-descripcion">Recursos y contenido recomendado para estudiantes de sistemas.</p>
+        <div class="contenedor-grid">
+
+          <article class="tarjeta-destacado">
+            <h3>📺 Canal: Midudev</h3>
+            <p>Uno de los mejores canales de programación en español. Contenido sobre desarrollo web, entrevistas técnicas y proyectos reales.</p>
+            <a href="https://www.youtube.com/@midudev" target="_blank" class="btn-enlace">Visitar canal ↗</a>
+          </article>
+
+          <article class="tarjeta-destacado">
+            <h3>🎵 Playlist: Deep Focus</h3>
+            <p>Música sin letra para mantener la concentración durante horas de estudio o programación intensa.</p>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DWZeKCadgRdKQ" target="_blank" class="btn-enlace">Abrir en Spotify ↗</a>
+          </article>
+
+          <article class="tarjeta-destacado">
+            <h3>🖼 Banco de Imágenes Gratis</h3>
+            <p>Lorem Picsum ofrece imágenes de alta calidad para usar en tus proyectos de práctica sin preocuparte por derechos de autor.</p>
+            <a href="#galeria" class="btn-enlace">Ver Galería ↑</a>
+          </article>
+
+          <article class="tarjeta-destacado">
+            <h3>🔁 Volver a los Videos</h3>
+            <p>¿Quieres repasar los tutoriales de HTML y CSS? Regresa a la sección de videos con un clic.</p>
+            <!-- href="#videos" es un enlace interno: lleva al usuario a esa sección en esta misma página -->
+            <a href="#videos" class="btn-enlace">Ir a Videos ↑</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SECCIÓN CONTACTO -->
+      <section id="contacto" class="seccion">
+        <h2>✉ Contacto</h2>
+        <p class="seccion-descripcion">¿Tienes sugerencias de contenido? Escríbeme.</p>
+        <div class="contenedor-contacto">
+          <article class="tarjeta-contacto">
+            <p>
+              <!-- mailto: abre el cliente de correo del usuario al hacer clic -->
+              📧 Correo: <a href="mailto:wijamich@uide.edu.ec" class="enlace-contacto">wijamich@uide.edu.ec</a>
+            </p>
+            <p>
+              <!-- tel: en dispositivos móviles abre la marcación directa -->
+              📞 Teléfono: <a href="tel:+5930995409128" class="enlace-contacto">+593 099 540 9128</a>
+            </p>
+            <p>
+              🌐 Universidad: <a href="https://www.uide.edu.ec" target="_blank" class="enlace-contacto">www.uide.edu.ec</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER: cierre de la página con créditos -->
+    <footer class="site-footer">
+      <p>MediaHub — Proyecto académico de contenido multimedia</p>
+      <p>Wilian Elian Jami Chicaiza · Ingeniería en Sistemas · UIDE · 2025</p>
+      <p><a href="#" class="footer-link">↑ Volver al inicio</a></p>
+    </footer>
+
+  </body>
+</html>
